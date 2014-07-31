@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<overlay id="sample" 
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+		 
+	<script type="application/x-javascript" src="sample.js" />
+	<script src="chrome://ktl29155extension/chrome/content/js/jquery-2.0.1.js" />
+	<script src="chrome://ktl29155extension/chrome/content/js/linkTargetFinder.js" />
+
+	<!-- Popup menu -->
+	<popup id="contentAreaContextMenu"> 
+
+		<!-- Displayed in popup menu at all times -->
+		<menuitem 
+			id="evaluate-xpath" 
+			label="Evaluate XPath - Paragraphs" 
+			oncommand="pathEvaluate();"/>
+		<menuitem 
+			id="list-xpaths" 
+			label="List Element XPath" 
+			oncommand="listPaths();"/>
+		<menuitem 
+			id="specify-xpaths" 
+			label="Find XPath - User Input" 
+			oncommand="specifyPaths();"/>
+		<menuitem 
+			id="highlight-page" 
+			label="Highlight - jQuery" 
+			oncommand="highlight();"/>
+		<menuitem
+			id="get-xpath-highlighted"
+			label="Get XPath of the highlighted text"
+			oncommand="uiWebview_storeSelection();"/>
+		
+	</popup> 
+
+	<statusbar id="status-bar">
+		<statusbarpanel id="my-panel" label="Hello World! Load successful - Status bar"  />
+	</statusbar>
+
+		
+	 
+</overlay>
